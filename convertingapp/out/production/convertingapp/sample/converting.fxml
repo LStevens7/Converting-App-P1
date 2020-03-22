@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="435.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.convertingController">
+  <tabs>
+    <Tab text="Menu">
+         <content>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Text stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Converting App">
+                     <font>
+                        <Font name="Franklin Gothic Medium Cond" size="59.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+         </content>
+    </Tab>
+    <Tab text="Speed">
+         <content>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ComboBox fx:id="speedComboBoxF" onMouseClicked="#speedSetupF" prefWidth="150.0" promptText="From" translateX="-80.0" translateY="15.0" />
+                        <ComboBox fx:id="speedComboBoxT" onMouseClicked="#speedSetupT" prefWidth="150.0" promptText="To" translateX="80.0" translateY="-16.0" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TextField fx:id="speedInput" maxWidth="150.0" prefWidth="150.0" translateY="-10.0" />
+                        <Button fx:id="convertSpeed" mnemonicParsing="false" onAction="#speedConvert" text="Convert" translateY="10.0" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TextField fx:id="speedOutput" editable="false" maxWidth="150.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </content>
+    </Tab>
+      <Tab text="Weight">
+         <content>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ComboBox fx:id="weightComboBoxF" onMouseClicked="#weightSetupF" prefWidth="150.0" promptText="From" translateX="-80.0" translateY="15.0" />
+                        <ComboBox fx:id="weightComboBoxT" onMouseClicked="#weightSetupT" prefWidth="150.0" promptText="To" translateX="80.0" translateY="-16.0" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TextField fx:id="weightInput" maxWidth="150.0" prefWidth="150.0" translateY="-10.0" />
+                        <Button fx:id="convertWeight" mnemonicParsing="false" onAction="#weightConvert" text="Convert" translateY="10.0" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TextField fx:id="weightOutput" editable="false" maxWidth="150.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </content>
+      </Tab>
+      <Tab text="Currency">
+         <content>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ComboBox fx:id="currencyComboBoxF" onMouseClicked="#currencySetupF" prefWidth="150.0" promptText="From" translateX="-80.0" translateY="15.0" />
+                        <ComboBox fx:id="currencyComboBoxT" onMouseClicked="#currencySetupT" prefWidth="150.0" promptText="To" translateX="80.0" translateY="-16.0" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TextField fx:id="currencyInput" maxWidth="150.0" prefWidth="150.0" translateY="-10.0" />
+                        <Button fx:id="convertCurrency" mnemonicParsing="false" onAction="#currencyConvert" text="Convert" translateY="10.0" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TextField fx:id="currencyOutput" editable="false" maxWidth="150.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </content>
+      </Tab>
+      <Tab text="Length">
+         <content>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ComboBox fx:id="lengthComboBoxF" onMouseClicked="#lengthSetupF" prefWidth="150.0" promptText="From" translateX="-80.0" translateY="15.0" />
+                        <ComboBox fx:id="lengthComboBoxT" onMouseClicked="#lengthSetupT" prefWidth="150.0" promptText="To" translateX="80.0" translateY="-16.0" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TextField fx:id="lengthInput" maxWidth="150.0" prefWidth="150.0" translateY="-10.0" />
+                        <Button fx:id="convertLength" mnemonicParsing="false" onAction="#lengthConvert" text="Convert" translateY="10.0" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TextField fx:id="lengthOutput" editable="false" maxWidth="150.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </content>
+      </Tab>
+      <Tab text="Temperature">
+         <content>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ComboBox fx:id="tempComboBoxF" onMouseClicked="#tempSetupF" prefWidth="150.0" promptText="From" translateX="-80.0" translateY="15.0" />
+                        <ComboBox fx:id="tempComboBoxT" onMouseClicked="#tempSetupT" prefWidth="150.0" promptText="To" translateX="80.0" translateY="-16.0" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TextField fx:id="tempInput" maxWidth="150.0" prefWidth="150.0" translateY="-10.0" />
+                        <Button fx:id="convertTemp" mnemonicParsing="false" onAction="#tempConvert" text="Convert" translateY="10.0" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TextField fx:id="tempOutput" editable="false" maxWidth="150.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>
